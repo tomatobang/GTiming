@@ -1,7 +1,7 @@
 {
   "name": "tomato-message",
   "version": "1.0.0",
-  "description": "bill module for tomatobang",
+  "description": "message module for tomatobang",
   "private": true,
   "egg": {
     "declarations": true,
@@ -12,8 +12,11 @@
     "egg": "^2.15.1",
     "egg-mongoose": "^2.1.1",
     "egg-rabbitmqjs": "^1.0.4",
+    "egg-redis": "^2.4.0",
     "egg-scripts": "^2.11.0",
-    "egg-validate": "^2.0.2"
+    "egg-socket.io": "^4.1.6",
+    "egg-validate": "^2.0.2",
+    "jsonwebtoken": "^8.5.1"
   },
   "devDependencies": {
     "autod": "^3.0.1",
@@ -32,6 +35,8 @@
     "start": "egg-scripts start --daemon --title=tomato-message",
     "stop": "egg-scripts stop --title=tomato-message",
     "dev": "egg-bin dev",
+    "tsc": "ets && tsc -p tsconfig.json",
+    "clean": "ets clean",
     "debug": "egg-bin debug",
     "test": "npm run lint -- --fix && npm run test-local",
     "test-local": "egg-bin test",

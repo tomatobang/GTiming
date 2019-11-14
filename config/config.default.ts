@@ -26,7 +26,7 @@ export default () => {
 
   config.cluster = {
     listen: {
-      port: 8001,
+      port: 8006,
     },
   };
 
@@ -68,7 +68,7 @@ export default () => {
   config.logger = {
     level: 'DEBUG',
     consoleLevel: 'INFO',
-    dir: '../app',
+    dir: './logs',
     encoding: 'utf-8',
     // 应用启动后，也能看日志( 文档中没说明, 且不建议使用 )
     // disableConsoleAfterReady: false,
@@ -85,12 +85,23 @@ export default () => {
   };
 
   config.mongoose = {
-    url: 'mongodb://127.0.0.1:27017/tomatobang',
+    url: 'mongodb://127.0.0.1:27017/tomato-message',
     options: {},
   };
 
-  config.serverPort = {
-    serverPort: env.serverPort || 3000,
+  config.redis = {
+    client: {
+      port: 6379,
+      host: '127.0.0.1',
+      password: '',
+      db: 0,
+    },
   };
+
+  config.token = {
+    tokenSecret: env.tokenSecret || 'tomatobang',
+    tokenExpiresIn: env.tokenExpiresIn || '3d',
+  };
+
   return config;
 };

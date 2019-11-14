@@ -42,10 +42,4 @@ export default (app: Application) => {
     .of('/chat')
     .route('response_friend_request', app.io.controller.chat.responseAddFriend);
   app.io.of('/chat').route('disconnect', app.io.controller.chat.disconnect);
-
-  // 版本管理
-  router.get('/api/version', controller.version.findLatestVersion);
-  // 选项
-  router.get('/api/option', controller.version.list);
-
 };

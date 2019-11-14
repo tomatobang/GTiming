@@ -9,9 +9,15 @@ const plugin: EggPlugin = {
     enable: true,
     package: 'egg-mongoose',
   },
+  
   consul: {
     enable: true,
     path: path.join(__dirname, '../lib/plugin/egg-consul'),
+  },
+
+  redis: {
+    enable: true,
+    package: 'egg-redis',
   },
 
   validate: {
@@ -21,7 +27,12 @@ const plugin: EggPlugin = {
   rabbitmqjs: {
     enable: false,
     package: 'egg-rabbitmqjs',
-  }
+  },
+
+  io: {
+    enable: true,
+    package: 'egg-socket.io',
+  },
 };
 
 export default plugin;

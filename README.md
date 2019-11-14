@@ -1,6 +1,6 @@
 # tomato-message
 
-bill module for tomatobang
+message module for tomatobang
 
 ## QuickStart
 
@@ -13,7 +13,7 @@ see [egg docs][egg] for more detail.
 ```bash
 $ npm i
 $ npm run dev
-$ open http://localhost:7001/
+$ open http://localhost:8006/
 ```
 
 ### Deploy
