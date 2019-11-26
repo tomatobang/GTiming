@@ -32,7 +32,7 @@
     "node": ">=10.0.0"
   },
   "scripts": {
-    "start": "egg-scripts start --daemon --title=tomato-message",
+    "start": "egg-scripts start --title=tomato-message",
     "stop": "egg-scripts stop --title=tomato-message",
     "dev": "egg-bin dev",
     "tsc": "ets && tsc -p tsconfig.json",
